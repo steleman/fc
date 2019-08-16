@@ -1,0 +1,80 @@
+
+// Main program related errors.
+ERROR(mp_stmt_err, PROGRAM name expected)
+ERROR(mp_end_stmt_err1, END PROGRAM statment not found)
+ERROR(mp_end_stmt_err2,
+      program name is different.Expected Program statment name)
+
+ERROR(program_no_intent, This program Unit cannot have intent)
+
+// Erorr related to indetifiers.
+ERROR(ident_err1, Identifier expected here)
+
+// Type related errors.
+ERROR(intrin_type_not_found, Intrinsic type not found)
+ERROR(illegal_derived_type_decl, Error parsing derived type decl/def statement)
+
+// Declaration related errors.
+ERROR(decl_colon_error, Expected two colons.Only one found)
+ERROR(decl_double_colon_error, Epxected double colon when initialization found.)
+
+// Array spec delcaration errors
+ERROR(arr_expect_upper_bound, Expected array upper bound integer here)
+ERROR(arr_spec_end, Expected end of array spec dimension here)
+ERROR(arr_spec_expect_another_dim, Expected another dimension here)
+
+// Attribute spec related issues
+ERROR(decl_exp_attr_spec_kind, Expecting the attribute specification)
+ERROR(decl_exp_arr_spec, Expected array dimension spec here)
+
+// Executable statements related errors
+ERROR(undeclared_variable, Use of undeclared variable)
+ERROR(dup_variable, Variable already declared in current scope)
+
+ERROR(unmatched_paren, Unmatched parenthesis in expression)
+
+ERROR(err_printstmt, Error parsing print stmt)
+ERROR(err_writestmt, Error parsing write stmt)
+ERROR(err_readstmt, Error parsing read stmt)
+ERROR(err_openstmt, Error parsing open stmt)
+ERROR(err_closestmt, Error parsing close stmt)
+ERROR(err_allocstmt, Error parsing allocate stmt)
+ERROR(exp_eol, Expecting end - of - line here.)
+ERROR(exp_token, Expecting token)
+ERROR(err_paramstmt, Error parsing paramter statment)
+ERROR(err_nullifystmt, Error parsing nullify statment)
+
+// IF stmt
+ERROR(exp_end_if, Expecting END IF construct here)
+ERROR(exp_while, Expecting while here.)
+ERROR(exp_end_do, Expecting END DO here.)
+ERROR(missing_then, Missing THEN value here?)
+ERROR(exp_ident_do_loop, Expecting scalar do variable here)
+
+ERROR(exp_equals, Expecting equals here)
+ERROR(exp_comma, Expecting comma here)
+ERROR(exp_only, expecting only keyword here)
+
+ERROR(exp_l_paren, Expecing open parenthesis here)
+ERROR(exp_r_paren, Expecing closed parenthesis here)
+
+ERROR(symbol_not_subroutine, Variable is not subroutine)
+ERROR(symbol_not_function, Variable is not function)
+
+ERROR(mod_file_error, Error reading mod file)
+
+ERROR(mutual_module_use, Cycle in module usage?)
+
+ERROR(var_decl_in_use_stmt,
+      Variable already declared as part of module in use stmt)
+
+ERROR(expect_none, Expecting Keyword none here !)
+
+ERROR(already_delcared_here, Already declared here)
+
+ERROR(expect_case, Expecting case keyword here)
+ERROR(expect_eol, Expecing end of line here)
+ERROR(error_in_expr, syntax error in expression)
+ERROR(error_in_implied_do, Error in ac - implied - do statement)
+ERROR(invalid_range_expr, invalid range expression)
+#undef ERROR

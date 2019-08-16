@@ -1,0 +1,75 @@
+#ifndef STMT
+#define STMT(X)
+#endif
+
+#ifndef EXPR
+#define EXPR(X) STMT(X)
+#endif
+
+#ifndef BLOCK
+#define BLOCK(X) STMT(X)
+#endif
+
+// Action statements.
+STMT(AssignmentStmt)
+STMT(StopStmt)
+STMT(PrintStmt)
+STMT(IfElseStmt)
+STMT(IfStmt)
+STMT(WhereStmt)
+STMT(WhereConstruct)
+STMT(DoWhileStmt)
+STMT(DoStmt)
+STMT(CallStmt)
+STMT(ReadStmt)
+STMT(WriteStmt)
+STMT(OpenStmt)
+STMT(CloseStmt)
+STMT(AllocateStmt)
+STMT(DeAllocateStmt)
+STMT(UseStmt)
+STMT(EntityDecl)
+STMT(DeclarationTypeSpec)
+STMT(CaseStmt)
+STMT(SelectCaseStmt)
+STMT(CycleStmt)
+STMT(ExitStmt)
+STMT(ForAllStmt)
+STMT(PointerAssignmentStmt)
+STMT(NullifyStmt)
+
+// Block node which contains multiple statements.
+BLOCK(Block)
+
+// Expressions.
+EXPR(ConstantVal)
+EXPR(ArrayConstructor)
+EXPR(FunctionReference)
+EXPR(BinaryExpr)
+EXPR(RelationalExpr)
+EXPR(LogicalExpr)
+EXPR(RangeExpr)
+EXPR(QuadExpr)
+EXPR(ObjectName)
+EXPR(ArrayElement)
+EXPR(ArraySection)
+EXPR(StructureComponent)
+EXPR(ArraySpec)
+EXPR(ACSpec)
+EXPR(AssignmentExpr)
+EXPR(ReturnStmt)
+EXPR(Format)
+EXPR(IOImpliedDo)
+EXPR(CastExpr)
+
+#ifdef STMT
+#undef STMT
+#endif
+
+#ifdef EXPR
+#undef EXPR
+#endif
+
+#ifdef BLOCK
+#undef BLOCK
+#endif

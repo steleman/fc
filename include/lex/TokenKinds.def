@@ -1,0 +1,137 @@
+
+
+#ifndef TOKEN
+#define TOKEN(X)
+#endif
+
+#ifndef KEYWORD
+#define KEYWORD(x) TOKEN(kw_##x)
+#endif
+
+// All the other tokens.
+TOKEN(unknown)
+TOKEN(eof)              // end of file
+TOKEN(eol)              // end of line \n or \r.
+TOKEN(identifier)       // identifier
+TOKEN(numeric_constant) // numeric numeric_constant
+TOKEN(comma)
+TOKEN(colon)     // :
+TOKEN(semicolon) // ;
+TOKEN(equals)
+TOKEN(ptr_assign) // =>
+TOKEN(integer)
+TOKEN(real)
+TOKEN(complex)
+TOKEN(logical)
+TOKEN(character)
+TOKEN(string)
+TOKEN(binary)
+TOKEN(octal)
+TOKEN(hexadecimal)
+TOKEN(l_paren)   // '('
+TOKEN(r_paren)   // ')'
+TOKEN(plus)      // +
+TOKEN(minus)     // -
+TOKEN(division)  // /
+TOKEN(star)      // *
+TOKEN(power)     // **
+TOKEN(percent)     // %
+TOKEN(concat)    // // - concat op
+TOKEN(arr_start) // (/ - for array begin
+TOKEN(arr_end)   // /) - for array end
+TOKEN(eq)        // .EQ. or ==
+TOKEN(ne)        // .NE. or /=
+TOKEN(lt)        // .LT. or <
+TOKEN(le)        // .LE. or <=
+TOKEN(gt)        // .GT. or >
+TOKEN(ge)        // .GE. or >=
+// Appended l(logical) to avoid conflicts with and
+TOKEN(l_and)  // .and.
+TOKEN(l_not)  // .not.
+TOKEN(l_or)   // .or.
+TOKEN(l_eqv)  // .eqv.
+TOKEN(l_neqv) // .neqv.
+
+TOKEN(undefined) // undefined token
+
+// All the keywords in the fortran program.
+KEYWORD(program)
+KEYWORD(subroutine)
+KEYWORD(interface)
+KEYWORD(function)
+KEYWORD(module)
+KEYWORD(end)
+
+KEYWORD(integer)
+KEYWORD(real)
+KEYWORD(double)
+KEYWORD(precision) // should be a single keyword.
+KEYWORD(complex)
+KEYWORD(character)
+KEYWORD(logical)
+KEYWORD(dimension)
+KEYWORD(parameter)
+KEYWORD(allocatable)
+KEYWORD(allocate)
+KEYWORD(deallocate)
+KEYWORD(save)
+KEYWORD(intent)
+KEYWORD(inout)
+KEYWORD(in)
+KEYWORD(out)
+KEYWORD(kind)
+KEYWORD(len)
+KEYWORD(open)
+KEYWORD(close)
+KEYWORD(status)
+KEYWORD(form)
+KEYWORD(unit)
+KEYWORD(file)
+KEYWORD(recursive)
+KEYWORD(advance)
+KEYWORD(fmt)
+KEYWORD(type)
+KEYWORD(sequence)
+KEYWORD(nullify)
+
+// Executable keywords
+KEYWORD(stop)
+KEYWORD(print)
+KEYWORD(read)
+KEYWORD(write)
+KEYWORD(if)
+KEYWORD(then)
+KEYWORD(else)
+KEYWORD(elseif)
+KEYWORD(endif)
+KEYWORD(do)
+KEYWORD(enddo)
+KEYWORD(while)
+KEYWORD(call)
+KEYWORD(use)
+KEYWORD(only)
+KEYWORD(contains)
+KEYWORD(implicit)
+KEYWORD(none)
+KEYWORD(where)
+KEYWORD(elsewhere)
+KEYWORD(select)
+KEYWORD(case)
+KEYWORD(default)
+KEYWORD(cycle)
+KEYWORD(exit)
+KEYWORD(return )
+KEYWORD(private)
+KEYWORD(public)
+KEYWORD(forall)
+KEYWORD(optional)
+KEYWORD(iostat)
+KEYWORD(intrinsic)
+KEYWORD(stat)
+KEYWORD(pointer)
+KEYWORD(target)
+
+// Tokens helpful for parsing.
+TOKEN(unary_minus) // - for unary.
+#undef TOKEN
+#undef KEYWORD

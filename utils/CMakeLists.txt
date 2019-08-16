@@ -1,0 +1,1 @@
+add_subdirectory(fort_test_gen)
